@@ -15,6 +15,10 @@ func ClassifyPrices(prices []int) (int, error) {
 	if len(prices) <= 0 {
 		return 0, fmt.Errorf("Lista vazia.")
 	}
+	if len(prices) == 1 {
+		return 3, nil
+	}
+	
 	crescente := true
 	for i := 0; i < len(prices)-1; i++ {
 		if prices[i] > prices[i+1] {
@@ -33,12 +37,9 @@ func ClassifyPrices(prices []int) (int, error) {
 		return 1, nil
 	} else if decrescente == true {
 		return 2, nil
-	} else if len(prices) == 1{
-		return 3, nil
-	} else {
+	}  else {
 		return 3, nil
 	}
 
 	return 0, nil
 }
-
