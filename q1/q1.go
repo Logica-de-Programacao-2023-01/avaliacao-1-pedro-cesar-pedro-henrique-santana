@@ -27,6 +27,8 @@ func DivideWatermelon(weight int) (bool, error) {
 		return true, nil
 	} else if divisao == false {
 		return false, nil
+	} else if  weight == 2{
+		return false, nil
 	}
 	return false, nil
 }
