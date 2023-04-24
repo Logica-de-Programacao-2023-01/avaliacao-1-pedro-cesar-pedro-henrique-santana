@@ -33,9 +33,12 @@ func ClassifyPrices(prices []int) (int, error) {
 		return 1, nil
 	} else if decrescente == true {
 		return 2, nil
+	} else if len(prices) == 1{
+		return 3, nil
 	} else {
 		return 3, nil
 	}
 
 	return 0, nil
 }
+
